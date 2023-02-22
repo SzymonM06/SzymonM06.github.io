@@ -1,5 +1,5 @@
 body{
-    background-image: url('/pics/background2.png');
+    background-image: url('/pics/background4.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -22,9 +22,43 @@ body{
     justify-content: center;
 }
 menu{
+    margin-top:30px;
     border-radius: 15px;
     float:left;
-    height:600px;
+    height:300px;
     width:180px;
     background-color:rgb(196, 194, 194);
+}
+#doc{
+    border-radius:15px;
+    float:left;
+    height:780px;
+    width:50%;
+    background-color:rgb(196, 194, 194);
+    margin-top:30px;
+    margin-left:30px;
+}
+table{
+    border:black 1px solid;
+    border-collapse: collapse;
+}
+th{
+    border:black 2px solid;
+    padding:7px;
+}
+tr{
+    border:black 2px solid;
+}
+td{
+    border:black 1px solid;
+    padding:7px;
+}
+#pics{
+    border-radius:15px;
+    float:left;
+    height:780px;
+    width:23%;
+    background-color:rgb(196, 194, 194);
+    margin-top:30px;
+    margin-left:30px;
 }
