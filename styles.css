@@ -3,7 +3,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Allerta Stencil';
 }
 #logo{
     width:120;
@@ -20,23 +20,27 @@ body{
     display:flex;
     align-items:center;
     justify-content: center;
+    font-family: 'Stencil', sans-serif;
 }
 menu{
     margin-top:30px;
     border-radius: 15px;
     float:left;
-    height:300px;
-    width:180px;
+    height:fit-content;
+    width:170px;
     background-color:rgb(196, 194, 194);
+    font-family: 'Stencil', sans-serif;
+    padding-bottom:15px;
 }
 #doc{
     border-radius:15px;
     float:left;
-    height:780px;
-    width:50%;
+    height:fit-content;
+    width:40%;
     background-color:rgb(196, 194, 194);
     margin-top:30px;
     margin-left:30px;
+    padding:10px;
 }
 table{
     border:black 1px solid;
@@ -56,9 +60,16 @@ td{
 #pics{
     border-radius:15px;
     float:left;
-    height:780px;
-    width:23%;
+    height:fit-content;
+    width:30%;
     background-color:rgb(196, 194, 194);
     margin-top:30px;
     margin-left:30px;
+    margin-bottom:15px;
+}
+h2{
+    font-family: 'Stencil', sans-serif;
+}
+h3{
+    font-family: 'Stencil', sans-serif;
 }
