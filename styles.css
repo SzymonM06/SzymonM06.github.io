@@ -14,13 +14,14 @@ body{
 #top{
     border-radius: 15px;
     background-color:orangered;
-    width:100%;
+    width:99%;
     height:130px;
     float:left;
     display:flex;
     align-items:center;
     justify-content: center;
     font-family: 'Stencil', sans-serif;
+    border:gray 5px solid;
 }
 #top2{
     border-radius: 15px;
@@ -60,20 +61,22 @@ body{
     text-align: center;
 }
 menu{
+    border:gray 5px solid;
     margin-top:30px;
     border-radius: 15px;
     float:left;
     height:fit-content;
-    width:15%;
+    width:14%;
     background-color:rgb(196, 194, 194);
     font-family: 'Stencil', sans-serif;
     padding-bottom:15px;
 }
 #doc{
+    border:gray 5px solid;
     border-radius:15px;
     float:left;
     height:fit-content;
-    width:45%;
+    width:44%;
     background-color:rgb(196, 194, 194);
     margin-top:30px;
     margin-left:30px;
@@ -120,11 +123,12 @@ td{
     border-radius:15px;
     float:left;
     height:fit-content;
-    width:30%;
+    width:29%;
     background-color:rgb(196, 194, 194);
     margin-top:30px;
     margin-left:30px;
     margin-bottom:15px;
+    border:gray 5px solid;
 }
 h2{
     font-family: 'Stencil', sans-serif;
