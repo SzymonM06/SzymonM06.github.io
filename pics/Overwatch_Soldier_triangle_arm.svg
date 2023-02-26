@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="405px" height="374px" viewBox="0 0 405 374" enable-background="new 0 0 405 374" xml:space="preserve">
+<g id="Layer_1_1_">
+	<g id="Layer_3">
+		<polygon fill="#9B5E26" points="203,51.216 366,348.216 38.961,347.455 		"/>
+	</g>
+	
+		<g id="svg2" inkscape:output_extension="org.inkscape.output.svg.inkscape" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" inkscape:version="0.46" sodipodi:version="0.32" sodipodi:docname="Cyclopropene 2D skeletal.svg">
+		<defs>
+			
+			
+				<inkscape:perspective  id="perspective9" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 526.18109 : 1" sodipodi:type="inkscape:persp3d" inkscape:vp_z="744.09448 : 526.18109 : 1" inkscape:persp3d-origin="372.04724 : 350.78739 : 1">
+				</inkscape:perspective>
+		</defs>
+		
+			<sodipodi:namedview  id="base" pagecolor="#ffffff" guidetolerance="10.0" inkscape:cx="236.23444" borderopacity="1.0" bordercolor="#666666" objecttolerance="10.0" showgrid="false" gridtolerance="10.0" inkscape:zoom="0.98089172" inkscape:cy="199.45486" inkscape:pageopacity="0.0" inkscape:window-width="1680" inkscape:current-layer="svg2" inkscape:window-y="-8" inkscape:window-height="1000" inkscape:pageshadow="2" inkscape:window-x="-8">
+			</sodipodi:namedview>
+		
+			<path id="path2450" sodipodi:r1="143.02551" sodipodi:cy="96.850647" sodipodi:sides="3" sodipodi:type="star" sodipodi:arg2="1.5778374" sodipodi:cx="132.53247" sodipodi:r2="71.512764" sodipodi:arg1="0.53063986" inkscape:rounded="0" inkscape:randomized="0" inkscape:flatsided="true" fill="none" stroke="#010101" stroke-width="35" d="
+			M366,348.216l-327.039-0.761L203.107,47.154L366,348.216z"/>
+	</g>
+	<circle fill="#CCCCCC" cx="202.5" cy="162.716" r="15.5"/>
+	<path fill="none" stroke="#CCCCCC" stroke-width="24" d="M152.5,208.5l90.5,0.716v30c0,0-93.833-11.05-89.833,72.617"/>
+	<line fill="none" stroke="#CCCCCC" stroke-width="24" x1="194.133" y1="283.625" x2="283.167" y2="281.5"/>
+	<line fill="none" stroke="#CCCCCC" stroke-width="24" x1="238.167" y1="312.5" x2="238.334" y2="286.5"/>
+</g>
+<g id="Layer_2">
+	<path fill="none" stroke="#C10000" d="M180.167,312.167"/>
+	<rect x="229.375" y="250.75" fill="#9B5E26" width="28.625" height="2.75"/>
+</g>
+</svg>
