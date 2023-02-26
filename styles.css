@@ -4,6 +4,7 @@ body{
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Allerta Stencil';
+    background-color:black;
 }
 #logo{
     width:120;
@@ -70,6 +71,7 @@ menu{
     background-color:rgb(196, 194, 194);
     font-family: 'Stencil', sans-serif;
     padding-bottom:15px;
+    text-align: left;
 }
 #doc{
     border:gray 5px solid;
@@ -143,6 +145,89 @@ u{
     color:blue;
 }
 #wrapper{
-    margin:auto;
-    width:1200px;
+    width:99%;
+    float:left;
+}
+@font-face {
+    font-family: 'Universal Union';
+    src: url('/pics/Universal-Union.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+#menu3{
+    border:rgb(176,124,32) 5px solid;
+    margin-top:30px;
+    border-radius: 15px;
+    float:left;
+    height:fit-content;
+    width:15%;
+    background-color:rgb(61, 61, 61);
+    font-family: Arial Black;
+    padding-bottom:15px;
+    padding:10px;
+    text-align: center;
+    font-family: 'Universal Union';
+    color:rgb(176,124,32);
+}
+#top4{
+    border-radius: 15px;
+    color:rgb(176,124,32);
+    width:fit-content;
+    height:120px;
+    float:left;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    font-family: 'Universal Union';
+}
+#doc4{
+    border:gray 5px solid;
+    border-radius:15px;
+    float:left;
+    height:fit-content;
+    width:44%;
+    border:rgb(176,124,32) 5px solid;
+    margin-top:30px;
+    margin-left:30px;
+    padding:10px;
+    background-color:rgb(61, 61, 61);
+    color:white;
+}
+#top5{
+    border-radius: 15px;
+    width:99%;
+    height:130px;
+    float:left;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    font-family: 'Stencil', sans-serif;
+    border:rgb(51,39,123) 5px solid;
+    color:rgb(0, 0, 0);
+    background-color:rgba(255,255,255,0.2);
+}
+#doc5{
+    float:left;
+    border:rgb(51,39,123) 5px solid;
+    border-radius:15px;
+    width:44%;
+    height:fit-content;
+    font-family:Allerta Stencil;
+    margin-top:30px;
+    margin-left:30px;
+    padding:10px;
+    background-color:rgba(255,255,255,0.2);
+}
+#menu3{
+    border:gray 5px solid;
+    margin-top:30px;
+    border-radius: 15px;
+    float:left;
+    height:fit-content;
+    width:14%;
+    background-color:rgb(196, 194, 194);
+    font-family: 'Stencil', sans-serif;
+    padding-bottom:15px;
+    text-align: left;
 }
