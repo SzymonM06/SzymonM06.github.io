@@ -155,7 +155,44 @@ u{
     font-style: normal;
     font-display: swap;
 }
+#top5{
+    border-radius: 15px;
+    width:99%;
+    height:130px;
+    float:left;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    font-family: 'Stencil', sans-serif;
+    border:rgb(51,39,123) 5px solid;
+    color:rgb(0, 0, 0);
+    background-color:rgba(255,255,255,0.2);
+}
+#doc5{
+    float:left;
+    border:rgb(51,39,123) 5px solid;
+    border-radius:15px;
+    width:44%;
+    height:fit-content;
+    font-family:Allerta Stencil;
+    margin-top:30px;
+    margin-left:30px;
+    padding:10px;
+    background-color:rgba(255,255,255,0.2);
+}
 #menu3{
+    border:gray 5px solid;
+    margin-top:30px;
+    border-radius: 15px;
+    float:left;
+    height:fit-content;
+    width:14%;
+    background-color:rgb(196, 194, 194);
+    font-family: 'Stencil', sans-serif;
+    padding-bottom:15px;
+    text-align: left;
+}
+#menu4{
     border:rgb(176,124,32) 5px solid;
     margin-top:30px;
     border-radius: 15px;
@@ -194,40 +231,49 @@ u{
     background-color:rgb(61, 61, 61);
     color:white;
 }
-#top5{
+
+
+
+#menu5{
+    border:rgb(145, 130, 0) 5px solid;
+    margin-top:30px;
     border-radius: 15px;
-    width:99%;
-    height:130px;
+    float:left;
+    height:fit-content;
+    width:15%;
+    background-color:black;
+    font-family: Arial Black;
+    padding-bottom:15px;
+    padding:10px;
+    text-align: center;
+    color:rgb(176,124,32);
+    font-family: 'Allerta Stencil';
+    color:rgb(145, 130, 0);
+}
+#top6{
+    border-radius: 15px;
+    width:fit-content;
+    height:fit-content;
     float:left;
     display:flex;
     align-items:center;
     justify-content: center;
-    font-family: 'Stencil', sans-serif;
-    border:rgb(51,39,123) 5px solid;
-    color:rgb(0, 0, 0);
-    background-color:rgba(255,255,255,0.2);
+    font-family: 'Stencil';
+    color:rgb(145, 130, 0);
+    background-color: black;
+    border:rgb(145, 130, 0) 5px solid;
+    padding:10px;
 }
-#doc5{
-    float:left;
-    border:rgb(51,39,123) 5px solid;
+#doc6{
+    border:gray 5px solid;
     border-radius:15px;
-    width:44%;
+    float:left;
     height:fit-content;
-    font-family:Allerta Stencil;
+    width:75%;
+    border:rgb(145, 130, 0) 5px solid;
     margin-top:30px;
     margin-left:30px;
     padding:10px;
-    background-color:rgba(255,255,255,0.2);
-}
-#menu3{
-    border:gray 5px solid;
-    margin-top:30px;
-    border-radius: 15px;
-    float:left;
-    height:fit-content;
-    width:14%;
-    background-color:rgb(196, 194, 194);
-    font-family: 'Stencil', sans-serif;
-    padding-bottom:15px;
-    text-align: left;
+    color:white;
+    background-color:rgba(0,0,0,0.5);
 }
