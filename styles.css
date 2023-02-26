@@ -277,3 +277,11 @@ u{
     color:white;
     background-color:rgba(0,0,0,0.5);
 }
+#pic{
+    width:fit-content;
+    height:fit-content;
+    border:rgb(145, 130, 0) 5px solid;
+    color:white;
+    float:left;
+    background-color:rgba(0,0,0,0.7);
+}
