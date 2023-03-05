@@ -166,7 +166,7 @@ u{
     font-family: 'Stencil', sans-serif;
     border:rgb(51,39,123) 5px solid;
     color:rgb(0, 0, 0);
-    background-color:rgba(255,255,255,0.2);
+    background-color:rgba(255,255,255,0.4);
 }
 #doc5{
     float:left;
@@ -178,7 +178,7 @@ u{
     margin-top:30px;
     margin-left:30px;
     padding:10px;
-    background-color:rgba(255,255,255,0.2);
+    background-color:rgba(255,255,255,0.4);
 }
 #menu3{
     border:gray 5px solid;
