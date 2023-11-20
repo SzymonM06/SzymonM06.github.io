@@ -1,16 +1,17 @@
 body {
-	background-image: url(./Assets/space.png); 
+	background-image: url(assets/space.png);
 	background-size: cover;
-	background-color:gray; /* incase background breaks again */
+	background-color:gray;
 }
 
 #background {
 	width: 600px;
 	height: 600px;
-	border: 2px solid #000;
+	border: 2px solid white;
 	margin: auto;
 	margin-top: 10px;
 	background-color: #000;
+
 }
 
 #cats-container {
@@ -40,7 +41,7 @@ body {
 #points {
 	color: #fff;
 	position: absolute;
-	margin-top: 0px;
+	margin-top: 5px;
 	margin-left: 5px;
 	font-family: sans-serif;
 	font-weight: 700;
