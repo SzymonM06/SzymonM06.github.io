@@ -1,0 +1,85 @@
+body {
+	background-image: url("assets/space.png");
+	background-size: cover;
+}
+
+#background {
+	width: 600px;
+	height: 600px;
+	border: 2px solid #000;
+	margin: auto;
+	margin-top: 10px;
+	background-color: #000;
+}
+
+#cats-container {
+	margin-left: 20px;
+	position: absolute;
+	text-align: center;
+}
+
+.cats {
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+#player {
+	position: absolute;
+	margin-top: 550px;
+	margin-left: 280px;
+}
+
+.bullets {
+	width: 10px;
+	height: 10px;
+	position: absolute;
+}
+
+#score,
+#points {
+	color: #fff;
+	position: absolute;
+	margin-top: 0px;
+	margin-left: 5px;
+	font-family: sans-serif;
+	font-weight: 700;
+}
+
+#points {
+	margin-left: 70px;
+}
+
+#controls-container {
+	margin: auto;
+	margin-top: 30px;
+	text-align: left;
+	width: 600px;
+	height: auto;
+	color:yellow;
+}
+
+.controls {
+	margin-bottom: 10px;
+	margin-right: 20px;
+	display: inline-block;
+}
+
+.controls-titles {
+	margin-top: 0px;
+	font-family: sans-serif;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#end-screen {
+	font-family: sans-serif;
+	font-weight: 700;
+	text-align: center;
+	width: 600px;
+	margin: auto;
+	color: #fff;
+	text-shadow: -3px -3px #000;
+	position: absolute;
+	margin-top: 50px;
+	display: none;
+}
