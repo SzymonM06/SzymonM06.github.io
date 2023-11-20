@@ -1,5 +1,5 @@
 body {
-	background-image: url("assets/space.png");
+	background-image: assets/space.png;
 	background-size: cover;
 }
 
