@@ -1,6 +1,7 @@
 body {
-	background-image: url(./Assets/space.png);
+	background-image: url(./Assets/space.png); /*doesnt fucking work and i have no idea why, it works normally but doesnt in github.io */
 	background-size: cover;
+	background-color:gray; /*temp fix for the lack of background image, i have better things to do */
 }
 
 #background {
