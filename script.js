@@ -1,23 +1,23 @@
 // Global variables
 $catsMove = setInterval("catAnimation()", 400); // How much the cat moves
 $catMargin = 20; // Starting value of how much the cat moves to the sides/possition
-$catMarginTop = 0; // Starting height of the cats/possition
+$catMarginTop = 0; // Starting height value of the cats/possition
 $goingRight = true; // Starting value of to which side the cats move
 
 // Function for cat animation
 function catAnimation() {
     // Check if cats reached the bottom of the container
     if ($("#cats-container").height() + $catMarginTop >= 550) {
-        clearInterval($catsMove); //wyłącza $catsmove
+        clearInterval($catsMove); //turns off $catsmove
         gameOver(false); // you lost lol 
     }
     
     // Toggle between two cat images for animation effect
     var catsSrc = $(".cats").attr("src"); //img + css
 	if (catsSrc == "Assets/cat.png") {
-		$(".cats").attr("src", "Assets/cat2.png");
+		$(".cats").attr("src", "Assets/cat2.png"); //replace cat.png with cat1.png
 	} else {
-		$(".cats").attr("src", "Assets/cat.png");
+		$(".cats").attr("src", "Assets/cat.png"); //vice versa
 	}
     
     // Update cat's horizontal position and direction
@@ -32,7 +32,7 @@ function catAnimation() {
         $goingRight = false;
         $catMargin -= 20;
     }
-    $("#cats-container").css("margin-left", $catMargin); // Apply the updated horizontal margin
+    $("#cats-container").css("margin-left", $catMargin); // Apply the updated horizontal margin, aka move the cat left or right
 
     // Move cat down and update vertical margin
     if ($catMargin <= 20 || $catMargin + $("#cats-container").width() >= 580) {
@@ -41,47 +41,46 @@ function catAnimation() {
     }
 }
 
-// Player control variables
-$playerMargin = 280; // Starting movement distance/possition for the player
+// Player control
+$playerMargin = 280; // Starting possition for the player, this value will be reduced or increased by 10
 $reload = true; // Starting value for player reload
-$points = 0; // Player score
+$points = 0; // Player score, its called points in JS because score was taken in CSS, wont fix it, deal with it
 
 // Event listener for player controls
 $("body").keydown(function(event) { 
     $key = event.which;
     // Move player left if A key is pressed
-    if ($key == 65 && $playerMargin > 20) { //20 so it doesnt go trough a wall
+    if ($key == 65 && $playerMargin > 20) { //bigger than 20 so it doesnt go trough a wall
         $playerMargin -= 10; //move by 10
-        $("#player").css("margin-left", $playerMargin); 
+        $("#player").css("margin-left", $playerMargin);  // set new margin for the player, aka move the player
     }
     // Move player right if D key is pressed
-    if ($key == 68 && $playerMargin < 540) {
+    if ($key == 68 && $playerMargin < 540) { //lower than 520 so it doesnt go trough a wall
         $playerMargin += 10;
         $("#player").css("margin-left", $playerMargin);
     }
-    // Fire player bullet if reload is allowed and W key or spacebar is pressed
+    // Fire player bullet if reload is allowed and W key is pressed
     if ($reload == true && ($key == 87)) {
         $reload = false;
         // Set a timeout for player bullet reload
-        $reloadTimeout = setTimeout(function() {  //cooldown
+        $reloadTimeout = setTimeout(function() {  //cooldown basically
             $reload = true;
         }, 1500);
         // Create and position player bullet
-        $("#player").after($("<img src='Assets/player-bullet.png' class='bullets' id='player-bullet'>"));
-        $player = $("#player");
-        $playerPosition = $player.offset();
-        $("#player-bullet").offset({ left: $playerPosition.left + 15, top: $playerPosition.top });
+        $("#player").after($("<img src='Assets/player-bullet.png' class='bullets' id='player-bullet'>")); //under player, place the bullet
+        $player = $("#player"); 
+        $playerPosition = $player.offset(); // get player location
+        $("#player-bullet").offset({ left: $playerPosition.left + 15, top: $playerPosition.top }); //move bullet to right location
         $marginTopplayerBullet = 0;
         
-        // Set interval for player bullet animation
         // Set interval for the player's bullet movement and collision detection
 		$playerBulletInterval = setInterval(function() {
 			// Update the position of the player's bullet
 			$("#player-bullet").css("margin-top", $marginTopplayerBullet); // Set the margin-top property of the player's bullet
-			$playerBulletPosition = $("#player-bullet").offset(); // Store the offset of the player's bullet
+			$playerBulletPosition = $("#player-bullet").offset(); // get bullet location
 			$marginTopplayerBullet -= 5; // Move the bullet upward
 
-			// Get the position of the cats and player
+			// Get the position of the cats
 			$catsLeft = $(".cats").offset(); // Store the offset of the cats
 
 			// Check if the player's bullet has reached the top of the screen
@@ -119,11 +118,11 @@ $("body").keydown(function(event) {
 
 					// Check for victory condition
 					if ($points == 120) {
-						gameOver(true); // I will put my [code] in your ass tomorrow if you're still not understanding.
+						gameOver(true); 
 					}
 				}
 			});
-		}, 10);
+		}, 10); //god, please help me
     }
 });
 
