@@ -1,0 +1,204 @@
+<html>
+    <head>
+        <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <link href="script.js" rel="script">
+    </head>
+    <body> 
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 MyHead">
+                    <H1>A generic incremental game</H1>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row mx-2">
+                <div class="col-md-1"></div>
+                <div class="col-md-3 col-sm-0">
+                    <!--Menu-->
+                    <br> <h2>Buttons!</h2>
+                    <hr><button onclick="buySmallDrill()" id="buySmallDrillButton" disabled>Buy Small Drill (Cost: <span id="SmallDrill_Cost">10</span>)</button>
+                    <hr><button onclick="buyDrill()" id="buyDrillButton" disabled>Buy Drill (Cost: <span id="Drill_Cost">30</span>)</button>
+                    <hr><button onclick="buyLargeDrill()" id="buyLargeDrillButton" disabled>Buy Large Drill (Cost: <span id="LargeDrill_Cost">150</span>)</button>
+                    <hr>
+                </div>
+                <div class="col-md-7 col-sm-12">
+                    <!--Main-->
+                    <div style="text-align: center;">
+                        <!-- <br><button onclick="saveProgress()">Save!</button> <button onclick="loadProgress()">Load!</button><hr> -->
+                        <br><h1>Moon Rock Miner! :D</h1>
+                        <button onclick="mineMoonRocks()" style="background-color: rgb(75, 86, 99); border: 0;"><img src="rock.png" class="img-fluid" style="width:300px; align-self: center;" draggable="false"></button>
+                        <h5><p>Moon Rocks: <span id="MoonRocks">0</span></p></h5>
+                    </div>
+                    <hr>
+                    <h5>Mining rate: <span id="TotalMiningRate">0</span> per second</h5>
+                    <hr>
+                    <h6>Small Drill Count: <span id="SmallDrill_Count">0</span><br></h6>
+                    <h6>Drill Count: <span id="Drill_Count">0</span><br></h6>
+                    <h6>Large Drill Count: <span id="LargeDrill_Count">0</span></h6>
+                    <hr>
+                    <script>
+                        let MoonRocks = 0;
+                        let MiningRate = 0;
+
+                        // Mine rock! 
+                        function mineMoonRocks() {
+                          MoonRocks += 1;
+                          updateMoonRocksDisplay();
+                        }
+
+                        // Save
+                        // function saveProgress() {
+                        //     document.cookie = "MoonRocks=" + MoonRocks + ";";
+
+                        //     document.cookie = "SmallDrill_Count=" + SmallDrill_Count + ";";
+                        //     document.cookie = "SmallDrill_Cost=" + SmallDrill_Cost + ";";
+
+                        //     document.cookie = "Drill_Count=" + Drill_Count + ";";
+                        //     document.cookie = "Drill_Cost=" + Drill_Cost + ";";
+
+                        //     alert("Saved!")
+                        // }
+
+                        // Load progress from a cookie
+                        // function loadProgress() {
+                        //     const cookies = document.cookie.split(';');
+                        //     cookies.forEach(cookie => {
+                        //         const [name, value] = cookie.trim().split('=');
+                        //         switch (name) {
+                        //         case "MoonRocks":
+                        //             currency = parseFloat(value);
+                        //             break;
+                        //         case "SmallDrill_Count":
+                        //             SmallDrill_Count = parseInt(value);
+                        //             break;
+                        //         case "SmallDrill_Cost":
+                        //             SmallDrill_Cost = parseInt(value);
+                        //             break;
+                        //         }
+                        //     });
+                        //     alert("Save Loaded!");
+                        // }
+
+                        // Generating rock
+                        setInterval(function() {
+                            // small drill
+                            MoonRocks += SmallDrill_Production * SmallDrill_Count;
+
+                            // drill
+                            MoonRocks += Drill_Production * Drill_Count;
+
+                            // large drill
+                            MoonRocks += LargeDrill_Production * LargeDrill_Count;
+
+                            updateMoonRocksDisplay();
+                        }, 1000);
+
+                        //update Moon Rocks
+                        function updateMoonRocksDisplay() {
+                            document.getElementById("MoonRocks").innerText = MoonRocks;
+                        }
+
+                        // Total Mining Rate
+                        function TotalMiningRate(){
+                            MiningRate = (SmallDrill_Production * SmallDrill_Count) + (Drill_Production * Drill_Count) + (LargeDrill_Production * LargeDrill_Count);
+                            document.getElementById("TotalMiningRate").innerText = MiningRate;
+                        }
+
+                        // Small Drill
+                        let SmallDrill_Cost = 10;
+                        let SmallDrill_Count = 0;
+                        let SmallDrill_Production = 1;
+
+                        function buySmallDrill() {
+                          if (MoonRocks >= SmallDrill_Cost) {
+                            MoonRocks -= SmallDrill_Cost;
+                            SmallDrill_Count++;
+                            SmallDrill_Cost = Math.ceil(SmallDrill_Cost * 1.5);
+
+                            updateMoonRocksDisplay();
+                            TotalMiningRate();
+
+                            // Update Small Drill Count
+                            document.getElementById("SmallDrill_Count").innerText = SmallDrill_Count;
+                            document.getElementById("SmallDrill_Cost").innerText = SmallDrill_Cost;
+                          }
+                        }
+
+                        setInterval(function(){
+                            const buySmallDrillButton = document.getElementById("buySmallDrillButton");
+                            if (MoonRocks >= SmallDrill_Cost) {
+                                buySmallDrillButton.disabled = false;
+                            } else {
+                                buySmallDrillButton.disabled = true;
+                            }
+                        }, 1);
+
+                        // Drill
+                        let Drill_Cost = 30;
+                        let Drill_Count = 0;
+                        let Drill_Production = 5;
+
+                        function buyDrill()
+                        {
+                            if(MoonRocks >= Drill_Cost) {
+                                MoonRocks -= Drill_Cost;
+                                Drill_Count++;
+                                Drill_Cost = Math.ceil(Drill_Cost * 1.9);
+
+                                updateMoonRocksDisplay();
+                                TotalMiningRate();
+
+                                // Update Drill Count
+                                document.getElementById("Drill_Count").innerText = Drill_Count;
+                                document.getElementById("Drill_Cost").innerText = Drill_Cost;
+                            }
+                        }
+
+                        setInterval(function(){
+                            const buyDrillButton = document.getElementById("buyDrillButton");
+                            if (MoonRocks >= Drill_Cost) {
+                                buyDrillButton.disabled = false;
+                            } else {
+                                buyDrillButton.disabled = true;
+                            }
+                        }, 1);
+
+                        // Large Drill
+                        let LargeDrill_Cost = 150;
+                        let LargeDrill_Count = 0;
+                        let LargeDrill_Production = 15;
+                        
+                        function buyLargeDrill()
+                        {
+                            if(MoonRocks >= LargeDrill_Cost) {
+                                MoonRocks -= LargeDrill_Cost;
+                                LargeDrill_Count++;
+                                LargeDrill_Cost = Math.ceil(LargeDrill_Cost * 2.5);
+
+                                updateMoonRocksDisplay();
+                                TotalMiningRate();
+
+                                // Update Large Drill Count
+                                document.getElementById("LargeDrill_Count").innerText = LargeDrill_Count;
+                                document.getElementById("LargeDrill_Cost").innerText = LargeDrill_Cost;
+                            }
+                        }
+
+                        setInterval(function(){
+                            const buyLargeDrillButton = document.getElementById("buyLargeDrillButton");
+                            if (MoonRocks >= LargeDrill_Cost) {
+                                buyLargeDrillButton.disabled = false;
+                            } else {
+                                buyLargeDrillButton.disabled = true;
+                            }
+                        }, 1);
+
+                      </script>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </body>
+</html>
