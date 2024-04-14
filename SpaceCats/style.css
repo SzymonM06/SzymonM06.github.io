@@ -85,3 +85,12 @@ body {
 	margin-top: 50px;
 	display: none;
 }
+
+a{
+	align-self: center;
+	color:rgb(255, 0, 0);
+}
+
+a:hover{
+	color:rgb(187, 3, 3);
+}
