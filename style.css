@@ -1,0 +1,10 @@
+* {
+    font-family: Arial;
+}
+
+.col-md-12{
+    text-align: center;
+}
+.col-md-6{
+    background-color: red;
+}
