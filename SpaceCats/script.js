@@ -117,7 +117,7 @@ $("body").keydown(function(event) {
 					$("#points").text($points);
 
 					// Check for victory condition
-					if ($points == 120) {
+					if ($points == 180) {
 						gameOver(true); 
 					}
 				}
@@ -194,7 +194,6 @@ function gameOver(win) {
     // Display game ending details
     $("#ending").html($ending);
     $("#lost_gif").html($lost_gif);
-    $("#points-ending").text($("#points").text());
     $("#end-screen").css("display", "block");
     $("body").keydown(function(event) {
         $key = event.which;
